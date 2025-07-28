@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tim Basket SMK Pertiwi</title>
+  <style>
+    :root {
+      --primary: #ffcc00;
+      --bg: #0d0d0d;
+      --text: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: black;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 100px;
+      margin-right: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .toggle-mode {
+      background: var(--primary);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('foto/DSCF9903.JPG') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      background: rgba(0, 132, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 50px;
+    }
+
+    .prestasi, .anggota, .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background-color: #333;
+    }
+
+    .card img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid var(--primary);
+    }
+
+    .galeri img {
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .galeri img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: var(--primary);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2em;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="foto/1001412469.png" alt="logo">
+    <h1>Casper Basketball</h1>
+  </div>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#prestasi">Prestasi</a>
+    <a href="#anggota">Anggota</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#daftar">Gabung</a>
+    <button class="toggle-mode" onclick="toggleMode()">🌙</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>🏀We Fam, We Team, We The Winner, Casper Juara!!🏀</h2>
+</section>
+
+<section id="tentang">
+  <h2>Tentang Kami</h2>
+  <p>Ekstrakurikuler Casper Basketball jadi rumah bagi para siswa berprestasi dalam dunia olahraga. Latihan rutin, kerja tim, dan mental juara adalah kunci kesuksesan kami.</p>
+</section>
+
+<section id="prestasi">
+  <h2>Prestasi Kami</h2>
+  <div class="prestasi">
+    <div class="card">
+      <h3>Juara 1</h3>
+      <p>Turnamen Basket Antar Wilayah Kuningan Jawabara 2024</p>
+    </div>
+    <div class="card">
+      <h3>Juara 3</h3>
+      <p>Basket 3X3 Competion Antar SMA/SMK Sekabupaten Kuningan 2025</p>
+    </div>
+    <div class="card">
+      <h3>Juara 2</h3>
+      <p>Perbasi Cup 2025 Antar Sewilayah Ciayumajakuning</p>
+    </div>
+  </div>
+</section>
+
+<section id="anggota">
+  <h2>Anggota Tim</h2>
+  <div class="anggota">
+    <div class="card">
+      <img src="foto/IMG-20250526-WA0069.jpg" alt="Raka">
+      <h4>Davin</h4>
+      <p>Point Guard</p>
+    </div>
+    <div class="card">
+      <img src="foto/IMG-20250526-WA0134.jpg" alt="Salsa">
+      <h4>Maman</h4>
+      <p>Shooting Guard</p>
+    </div>
+    <div class="card">
+      <img src="foto/IMG-20250526-WA0103.jpg" alt="Andre">
+      <h4>Bambang</h4>
+      <p>Center</p>
+    </div>
+    <div class="card">
+      <img src="foto/IMG-20250526-WA0188.jpg" alt="Iqbal">
+      <h4>Ardi</h4>
+      <p>Small Forward</p>
+    </div>
+  </div>
+</section>
+
+<section id="galeri">
+  <h2>Galeri Turnamen</h2>
+  <div class="galeri">
+    <img src="foto/IMG-20231112-WA0102.jpg" alt="galeri1">
+    <img src="foto/IMG-20250530-WA0038.jpg" alt="galeri2">
+    <img src="foto/IMG-20250529-WA0058.jpg" alt="galeri3">
+  </div>
+</section>
+
+<section id="daftar">
+  <h2>Gabung Tim Basket!</h2>
+  <form onsubmit="return validasiForm()">
+    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+    <input type="email" id="email" placeholder="Email Aktif" required>
+    <textarea id="alasan" placeholder="Kenapa kamu mau gabung?" rows="4" required></textarea>
+    <button type="submit">Daftar Sekarang</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Tim Basket SMK Pertiwi - Dibuat oleh Admin Casperbasketball</p>
+</footer>
+
+<script>
+  function validasiForm() {
+    const nama = document.getElementById('nama').value;
+    const email = document.getElementById('email').value;
+    const alasan = document.getElementById('alasan').value;
+
+    if (!nama || !email || !alasan) {
+      alert("Isi semua form-nya dulu, bro!");
+      return false;
+    }
+
+    alert(`Makasih ${nama}, pendaftaran lo udah masuk! Kami bakal hubungi ke ${email}.`);
+    return false;
+  }
+
+  function toggleMode() {
+    const root = document.documentElement;
+    const isDark = root.style.getPropertyValue('--bg') === '#fff';
+
+    if (isDark) {
+      root.style.setProperty('--bg', '#0d0d0d');
+      root.style.setProperty('--text', '#fff');
+    } else {
+      root.style.setProperty('--bg', '#fff');
+      root.style.setProperty('--text', '#000');
+    }
+  }
+</script>
+
+</body>
+</html>
